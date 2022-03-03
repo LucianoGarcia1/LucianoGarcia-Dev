@@ -5,5 +5,5 @@ function preCarregamento(){
 
     setTimeout(() => {
         pre_carregamento.style.display = "none";
-    }, 500);
+    }, 2000);
 }
