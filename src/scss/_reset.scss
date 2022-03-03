@@ -1,0 +1,36 @@
+@import 'variables';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+html,body{
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transition: all .5s;
+}
+
+ion-icon{
+    font-size: 1.2em;
+}
+
+h2{
+    font-weight: 600;
+    font-size: 1.5em;
+    color: var(--color-black);
+}
+
+p{
+    line-height: 1.6em;
+}

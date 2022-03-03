@@ -1,0 +1,37 @@
+:root{
+    --background-blue: #287bff;
+    --background-blue2: #1a69e8;
+    --blue: #287bff;
+    --blue2: #1a69e8;
+    --color-white: #fff;
+    --color-black: #222;
+    --color-cinza: #999;
+    --color-pre: rgba(255,255,255, 0.3);
+    --color-orange: orange;
+    --color-red: red;
+    --color-green: seagreen;
+}
+.dark-theme{
+    --background-blue: var(--color-black);
+    --background-blue2: var(--color-black);
+}
+
+.subRed{
+    --background-blue: var(--color-red);
+    --background-blue2: var(--color-red);
+}
+
+.subOrange{
+    --background-blue: var(--color-orange);
+    --background-blue2: var(--color-orange);
+}
+
+.subGreen{
+    --background-blue: var(--color-green);
+    --background-blue2: var(--color-green);
+}
+
+.blueTheme{
+    --background-blue: #287bff;
+    --background-blue2: #1a69e8;
+}
