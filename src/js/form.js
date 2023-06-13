@@ -1,10 +1,10 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyAfiHh3BujuFZufFgzbJuBGYEcE6wPJ0g0",
-    authDomain: "form-lc.firebaseapp.com",
-    projectId: "form-lc",
-    storageBucket: "form-lc.appspot.com",
-    messagingSenderId: "77035445096",
-    appId: "1:77035445096:web:534bfbe8788ac0f9fd94dd"
+  apiKey: "AIzaSyAfiHh3BujuFZufFgzbJuBGYEcE6wPJ0g0",
+  authDomain: "form-lc.firebaseapp.com",
+  projectId: "form-lc",
+  storageBucket: "form-lc.appspot.com",
+  messagingSenderId: "77035445096",
+  appId: "1:77035445096:web:534bfbe8788ac0f9fd94dd",
 };
 
 firebase.initializeApp(firebaseConfig);
@@ -62,25 +62,24 @@ function saveContactInfo(name, email, tel, message) {
   });
 }
 
-function sendEmail(name, email, tel, message){
-
+function sendEmail(name, email, tel, message) {
   fetch("https://formsubmit.co/ajax/lcmsilva2223@gmail.com", {
     method: "POST",
-    headers: { 
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
     },
 
     body: JSON.stringify({
-        Nome: name,
-        Email: email,
-        Telefone: tel,
-        Mensagem: message
-    })
-})
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.log(error));
+      Nome: name,
+      Email: email,
+      Telefone: tel,
+      Mensagem: message,
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((error) => console.log(error));
 }
 
 form.addEventListener("submit", submitForm);

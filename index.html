@@ -1,359 +1,539 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="author" content="Luciano Garcia Developer">
-    <meta name="description" content="Portfólio Luciano Garcia fique a vontade para explorar!">
+    <meta name="author" content="Luciano Garcia Developer" />
+    <meta name="description" content="Explore o portfólio de Luciano Garcia!" />
 
-    <meta name="keywords" content="Luciano Garcia, Portfólio Luciano Garcia, Luciano Garcia Deeloper, Desenvolvedor Luciano Garcia, Frontend Developer.">
+    <meta
+      name="keywords"
+      content="Luciano Garcia, Portfólio, Desenvolvedor Frontend, Frontend Developer"
+    />
 
-    <link rel="shortcut icon" href="assets/img/favicon-32x32.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon-32x32.png"
+      type="image/x-icon"
+    />
     <title>Luciano Garcia - Frontend Developer</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3969RLDMCQ"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-3969RLDMCQ"
+    ></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    gtag('config', 'G-3969RLDMCQ');
+      gtag("config", "G-3969RLDMCQ");
     </script>
-    
-    <meta name="google-site-verification" content="QZ1qDvdsIeP_KYeaXYgZwBNV2mK1gOn2MtId1e_qpVY" />
+
+    <meta
+      name="google-site-verification"
+      content="QZ1qDvdsIeP_KYeaXYgZwBNV2mK1gOn2MtId1e_qpVY"
+    />
 
     <!--STYLE-->
-    <link rel="stylesheet" href="src/scss/style.css">
+    <link rel="stylesheet" href="src/scss/style.css" />
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
-<body onload="preCarregamento()">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body onload="preCarregamento()">
     <div class="pre-carregamento">
-        <div class="spinner-carregamento"></div>
+      <div class="spinner-carregamento"></div>
     </div>
 
     <section class="content">
-        <aside class="aside-bar">
+      <aside class="aside-bar">
+        <button class="close">
+          <img src="assets/img/close2.svg" alt="fechar" />
+        </button>
 
-            <button class="close">
-                <img src="assets/img/close2.svg" alt="fechar">
+        <nav class="nav">
+          <ul id="menu">
+            <li>
+              <a href="#inicio"
+                ><ion-icon name="home-outline"></ion-icon> Inicio</a
+              >
+            </li>
+
+            <li>
+              <a href="#skills"
+                ><ion-icon name="keypad-outline"></ion-icon> Skills</a
+              >
+            </li>
+            <li>
+              <a href="#sobre"
+                ><ion-icon name="send-outline"></ion-icon> Sobre</a
+              >
+            </li>
+            <li>
+              <a href="#features"
+                ><ion-icon name="build-outline"></ion-icon> Serviços</a
+              >
+            </li>
+            <li>
+              <a href="#contact"
+                ><ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                Contato</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <!--ASIDE ATIVA-->
+
+      <section class="container">
+        <div class="hamburguer" id="activeMenu">
+          <div class="sub__hamburguer">
+            <button id="btn-menu">
+              <img src="assets/img/close-outline.svg" alt="menu" id="grid" />
             </button>
-    
-            <nav class="nav">
-                <ul id="menu">
-                    <li><a href="#inicio"><ion-icon name="home-outline"></ion-icon> Inicio</a></li>
-    
-                    <li><a href="#skills"><ion-icon name="keypad-outline"></ion-icon> Skills</a></li>
-                    <li><a href="#sobre"><ion-icon name="send-outline"></ion-icon> Sobre</a></li>
-                    <li><a href="#features"><ion-icon name="build-outline"></ion-icon> Serviços</a></li>
-                    <li><a href="#contact"><ion-icon name="chatbubble-ellipses-outline"></ion-icon> Contato</a></li>
-                </ul>
-            </nav>
-        </aside><!--ASIDE ATIVA-->
-    
-        <section class="container">
-            <div class="hamburguer" id="activeMenu">
-                <div class="sub__hamburguer">
-                    <button id="btn-menu">
-                        <img src="assets/img/close-outline.svg" alt="menu" id="grid">
-                    </button>
-                </div>
+          </div>
+        </div>
+
+        <header class="inicio" id="inicio">
+          <div class="inicio__content">
+            <div class="inicio__img">
+              <img
+                src="assets/img/Blogging-bro (1)-svg-svg.svg"
+                alt="Luciano Garcia"
+              />
             </div>
 
-            <div class="temas" id="temas">
-                <button id="assets">
-                    <img src="assets/img/settings-outline.svg" alt="settings">
-                </button>
+            <div class="title">
+              <h1>Olá, eu sou Luciano Garcia</h1>
+              <p class="stacks">Frontend Developer e Web Design</p>
 
-                <button id="darkMode">
-                    <ion-icon name="contrast-outline"></ion-icon>
-                </button>
+              <div class="cv">
+                <a href="assets/captcha/index.html" id="curriculo"
+                  ><ion-icon name="arrow-down-outline"></ion-icon> Download
+                  Cv</a
+                >
 
-                <div class="assets">
-                    <h3>Theme Colors</h3>
-        
-                    <div class="btns__colors">
-                        <button id="red"></button>
-                        <button id="orange"></button>
-                        <button id="green"></button>
-                        <button id="blue"></button>
-                    </div>
-                </div>
+                <a href="#contact" id="contato"
+                  ><ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                  Contato</a
+                >
+              </div>
+            </div>
+          </div>
+          <!--inicio content-->
+
+          <div class="step">
+            <div class="step__swipper"></div>
+
+            <div class="step__swipper"></div>
+
+            <div class="step__swipper"></div>
+
+            <div class="step__swipper"></div>
+
+            <div class="step__swipper"></div>
+
+            <div class="step__swipper"></div>
+
+            <div class="step__swipper"></div>
+          </div>
+        </header>
+
+        <section class="skills" id="skills">
+          <div class="skills__title">
+            <h2 data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+              Conheça Minhas Skills!
+            </h2>
+
+            <p data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+              Estou constantemente atualizando minhas habilidades e acompanhando
+              as melhores tecnologias do mercado. Isso me permite elevar o nível
+              das aplicações web que desenvolvo.
+            </p>
+          </div>
+
+          <div class="abilidades">
+            <div
+              class="box"
+              data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom"
+              id="box"
+            >
+              <div class="titulo">
+                <h3>React</h3>
+                <ion-icon name="rocket-outline"></ion-icon>
+              </div>
+
+              <p>Biblioteca do Javascript</p>
+            </div>
+            <div
+              class="box"
+              data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom"
+              id="box"
+            >
+              <div class="titulo">
+                <h3>Html</h3>
+                <ion-icon name="code-slash-outline"></ion-icon>
+              </div>
+
+              <p>Linguagem de Marcação</p>
+            </div>
+            <div
+              class="box"
+              data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom"
+              id="box"
+            >
+              <div class="titulo">
+                <h3>Css</h3>
+                <ion-icon name="code-working-outline"></ion-icon>
+              </div>
+
+              <p>Folha de estilos</p>
             </div>
 
-            <header class="inicio" id="inicio">
-                <div class="inicio__content">
+            <div
+              class="box"
+              data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom"
+              id="box"
+            >
+              <div class="titulo">
+                <h3>Javascript</h3>
+                <ion-icon name="planet-outline"></ion-icon>
+              </div>
 
-                    <div class="inicio__img">
-                        <img src="assets/img/Blogging-bro (1)-svg-svg.svg" alt="">
-                    </div>
+              <p>Linguagem de Programação</p>
+            </div>
+            <div
+              class="box"
+              data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom"
+              id="box"
+            >
+              <div class="titulo">
+                <h3>Typescript</h3>
+                <ion-icon name="planet-outline"></ion-icon>
+              </div>
 
-                    <div class="title">
-                        <h1>Olá, eu sou Luciano Garcia</h1>
-                        <p class="stacks">Frontend Developer e Web Design</p>
+              <p>Linguagem de Programação</p>
+            </div>
 
-                        <div class="cv">
-                            <a href="assets/captcha/index.html" id="curriculo"><ion-icon name="arrow-down-outline"></ion-icon> Download Cv</a>
+            <div
+              class="box"
+              data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom"
+              id="box"
+            >
+              <div class="titulo">
+                <h3>Sass</h3>
+                <ion-icon name="rocket-outline"></ion-icon>
+              </div>
 
-                            <a href="#contact" id="contato"><ion-icon name="chatbubble-ellipses-outline"></ion-icon> Contato</a>
-                        </div>
-                    </div>
-                </div><!--inicio content-->
+              <p>Pré-Processador Css</p>
+            </div>
 
-                <div class="step">
-                    <div class="step__swipper"></div>
+            <div
+              class="box"
+              data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom"
+              id="box"
+            >
+              <div class="titulo">
+                <h3>Bem</h3>
+                <ion-icon name="grid-outline"></ion-icon>
+              </div>
 
-                    <div class="step__swipper"></div>
+              <p>Metodologia css</p>
+            </div>
 
-                    <div class="step__swipper"></div>
+            <div
+              class="box"
+              data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom"
+              id="box"
+            >
+              <div class="titulo">
+                <h3>Git</h3>
+                <ion-icon name="git-branch-outline"></ion-icon>
+              </div>
 
-                    <div class="step__swipper"></div>
-                    
-                    <div class="step__swipper"></div>
+              <p>Version control system</p>
+            </div>
+          </div>
+        </section>
+        <!--SKILLS-->
 
-                    <div class="step__swipper"></div>
+        <section class="about" id="sobre">
+          <div class="about__content">
+            <div class="about__img">
+              <img
+                src="assets/img/Job hunt-bro-svg-svg.svg"
+                alt="about my"
+                data-aos="fade-up-right"
+                data-aos-anchor-placement="center-bottom"
+                id="right"
+              />
+            </div>
 
-                    <div class="step__swipper"></div>
+            <div
+              class="about__title"
+              data-aos="fade-up-left"
+              data-aos-anchor-placement="center-bottom"
+            >
+              <h2>Buscando um profissional em front-end?</h2>
 
-                </div>
-            </header>
-    
-            <section class="skills" id="skills">
+              <p>
+                Sou um Desenvolvedor Frontend apaixonado pelo meu trabalho e
+                obcecado em acompanhar as tendências tecnológicas. Acredito que
+                a tecnologia terá um papel ainda mais importante em nosso dia a
+                dia no futuro. Dedico-me diariamente ao estudo, buscando
+                aprimorar minha criatividade e inventividade na criação de
+                códigos inovadores.
+              </p>
+            </div>
+          </div>
 
-                <div class="skills__title">
-                    <h2 data-aos="fade-up"
-                    data-aos-anchor-placement="center-bottom">Conheça Minhas Skills</h2>
+          <div class="about__content about__content--reverse">
+            <div class="about__img">
+              <img
+                src="assets/img/undraw_interview_re_e5jn.svg"
+                alt="about my"
+                class="img--right"
+                data-aos="fade-up-left"
+                data-aos-anchor-placement="center-bottom"
+                id="left"
+              />
+            </div>
 
-                    <p data-aos="fade-up"
-                    data-aos-anchor-placement="center-bottom">Procuro sempre me atualizar em termos de tecnologias, buscando as melhores tecnologias do mercado, com isso melhorando o nivel de nossas aplicações web.</p>
-                </div>
+            <div
+              class="about__title"
+              data-aos="fade-up-right"
+              data-aos-anchor-placement="center-bottom "
+            >
+              <h2>Conheça-me melhor, mais sobre mim!</h2>
 
-                <div class="abilidades">
-                    <div class="box" data-aos="fade-up"
-                    data-aos-anchor-placement="center-bottom" id="box">
-                        <div class="titulo">
-                            <h3>Html</h3>
-                            <ion-icon name="code-slash-outline"></ion-icon>
-                        </div>
-        
-                        <p>Linguagem de Marcação</p>
-                    </div>
-                    <div class="box" data-aos="fade-up"
-                    data-aos-anchor-placement="center-bottom" id="box">
-                        <div class="titulo">
-                            <h3>Css</h3>
-                            <ion-icon name="code-working-outline"></ion-icon>
-                        </div>
-        
-                        <p>Folha de estilos</p>
-                    </div>
-        
-                    <div class="box"  data-aos="fade-up"
-                    data-aos-anchor-placement="center-bottom" id="box">
-                        <div class="titulo">
-                            <h3>Javascript</h3>
-                            <ion-icon name="planet-outline"></ion-icon>
-                        </div>
-        
-                        <p>Linguagem de Programação</p>
-                    </div>
-        
-                    <div class="box" data-aos="fade-up"
-                    data-aos-anchor-placement="center-bottom" id="box">
-                        <div class="titulo">
-                            <h3>Sass</h3>
-                            <ion-icon name="rocket-outline"></ion-icon>
-                        </div>
-        
-                        <p>Pré-Processador Css</p>
-                    </div>
-        
-                    <div class="box" data-aos="fade-up"
-                    data-aos-anchor-placement="center-bottom" id="box">
-                        <div class="titulo">
-                            <h3>Bem</h3>
-                            <ion-icon name="grid-outline"></ion-icon>
-                        </div>
-        
-                        <p>Metodologia css</p>
-                    </div>
-        
-                    <div class="box" data-aos="fade-up"
-                    data-aos-anchor-placement="center-bottom" id="box">
-                        <div class="titulo">
-                            <h3>Git</h3>
-                            <ion-icon name="git-branch-outline"></ion-icon>
-                        </div>
-        
-                        <p>Version control system</p>
+              <p>
+                Meu nome é Luciano Garcia, sou Desenvolvedor Frontend experiente
+                com habilidades em Web Design e UI Design. Transformo ideias em
+                realidade digital, criando sites visualmente impressionantes e
+                intuitivos. Comprometido, criativo e apaixonado pelo que faço,
+                estou pronto para impulsionar seu projeto ao próximo nível.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!--ABOUT-->
 
-                    </div>
-                </div>
-            </section><!--SKILLS-->
+        <section class="servicos" id="features">
+          <div class="servicos__title">
+            <h2 data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+              Conheça meus serviços!
+            </h2>
 
-            <section class="about" id="sobre">
-                <div class="about__content">
-                    <div class="about__img">
-                        <img src="assets/img/Job hunt-bro-svg-svg.svg" alt="about my" data-aos="fade-up-right" data-aos-anchor-placement="center-bottom" id="right">
-                    </div>
+            <p data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+              Estou aqui para oferecer a você uma escolha inteligente para o seu
+              projeto. Entre em contato comigo abaixo.
+            </p>
+          </div>
 
-                    <div class="about__title" data-aos="fade-up-left" data-aos-anchor-placement="center-bottom">
-                        <h2>Buscando um profissional em front-end?</h2>
+          <div class="servicos__content">
+            <div
+              class="card"
+              data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom"
+            >
+              <div class="titulo">
+                <h3>Landing pages (Sites)</h3>
 
-                        <p>Sou um Desenvolvedor Frontend, e estudo cada dia mais pensando no futuro e como a tecnologia fará parte ainda mais do cotidiano. Estudando sempre a criatividade e a invenção de algo novo com meus Códigos.</p>
-                    </div>
-                </div>
+                <ion-icon name="rocket-outline"></ion-icon>
+              </div>
 
-                <div class="about__content about__content--reverse">
-                    <div class="about__img">
-                        <img src="assets/img/undraw_interview_re_e5jn.svg" alt="about my" class="img--right" data-aos="fade-up-left" data-aos-anchor-placement="center-bottom" id="left">
-                    </div>
+              <p>Páginas de destinos</p>
+            </div>
 
-                    <div class="about__title" data-aos="fade-up-right" data-aos-anchor-placement="center-bottom ">
-                        <h2>Conheça-me melhor, mais sobre mim!</h2>
+            <div
+              class="card"
+              data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom"
+            >
+              <div class="titulo">
+                <h3>(Seo)</h3>
 
-                        <p>Meu nome é Luciano Garcia, tenho um ano de experiência em frontend, Também tenho conhecimentos em Web Design e Ui Design. Desenvolvo sites baseados em conhecimentos de Ui/Ux deixando aplicação mais bonita e intuita com usuário.
-                        </p>
-                    </div>
-                </div>
-            </section><!--ABOUT-->
+                <ion-icon name="search-outline"></ion-icon>
+              </div>
 
-            <section class="servicos" id="features">
-                <div class="servicos__title">
-                    <h2 data-aos="fade-up"
-                    data-aos-anchor-placement="center-bottom">Conheça meus serviços</h2>
+              <p>Search engine optimization</p>
+            </div>
 
-                    <p data-aos="fade-up"
-                    data-aos-anchor-placement="center-bottom">
-                        Conheça oque tenho a lhe oferecer, tenha uma escolha inteligente para seu projeto entre em contato comigo abaixo.
-                    </p>
-                </div>
+            <div
+              class="card"
+              data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom"
+            >
+              <div class="titulo">
+                <h3>Ui design</h3>
 
-                <div class="servicos__content">
-                    <div class="card" data-aos="fade-up"
-                    data-aos-anchor-placement="center-bottom">
-                        <div class="titulo">
-                            <h3>Landing pages (Sites)</h3>
-                            
-                            <ion-icon name="rocket-outline"></ion-icon>
-                        </div>
-        
-                        <p>Páginas de destinos</p>
-                    </div>
+                <ion-icon name="build-outline"></ion-icon>
+              </div>
 
-                    <div class="card" data-aos="fade-up"
-                    data-aos-anchor-placement="center-bottom">
-                        <div class="titulo">
-                            <h3>(Seo)</h3>
+              <p>User interface</p>
+            </div>
 
-                            <ion-icon name="search-outline"></ion-icon>
-                        </div>
-        
-                        <p>Search engine optimization</p>
-                    </div>
+            <div
+              class="card"
+              data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom"
+            >
+              <div class="titulo">
+                <h3>Sites responsivos</h3>
 
-                    <div class="card" data-aos="fade-up"
-                    data-aos-anchor-placement="center-bottom">
-                        <div class="titulo">
-                            <h3>Ui design</h3>
+                <ion-icon name="expand-outline"></ion-icon>
+              </div>
 
-                            <ion-icon name="build-outline"></ion-icon>
-                        </div>
-        
-                        <p>User interface</p>
-                    </div>
+              <p>Media queries</p>
+            </div>
 
-                    <div class="card" data-aos="fade-up"
-                    data-aos-anchor-placement="center-bottom">
-                        <div class="titulo">
-                            <h3>Sites responsivos</h3>
+            <div
+              class="card"
+              data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom"
+            >
+              <div class="titulo">
+                <h3>Em breve Devops</h3>
 
-                            <ion-icon name="expand-outline"></ion-icon>
-                        </div>
-        
-                        <p>Media queries</p>
-                    </div>
+                <ion-icon name="airplane-outline"></ion-icon>
+              </div>
 
-                    <div class="card" data-aos="fade-up"
-                    data-aos-anchor-placement="center-bottom">
-                        <div class="titulo">
-                            <h3>Em breve Devops</h3>
+              <p>Em breve Devops</p>
+            </div>
 
-                            <ion-icon name="airplane-outline"></ion-icon>
-                        </div>
-        
-                        <p>Em breve Devops</p>
-                    </div>
+            <div
+              class="card"
+              data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom"
+            >
+              <div class="titulo">
+                <h3>Em breve Banco de dados</h3>
 
-                    <div class="card" data-aos="fade-up"
-                    data-aos-anchor-placement="center-bottom">
-                        <div class="titulo">
-                            <h3>Em breve Banco de dados</h3>
+                <ion-icon name="server-outline"></ion-icon>
+              </div>
 
-                            <ion-icon name="server-outline"></ion-icon>
-                        </div>
-        
-                        <p>Banco de Dados</p>
-                    </div>
-                </div><!--CONTENT-->
-            </section><!--FEATURES-->
+              <p>Banco de Dados</p>
+            </div>
+          </div>
+          <!--CONTENT-->
+        </section>
+        <!--FEATURES-->
 
-            <section class="contact" id="contact">
-                <div class="contact__title">
-                    <h2 data-aos="fade-up"
-                    data-aos-anchor-placement="center-bottom">Entre em contato comigo!</h2>
+        <section class="contact" id="contact">
+          <div class="contact__title">
+            <h2 data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+              Entre em contato comigo!
+            </h2>
 
-                    <p data-aos="fade-up"
-                    data-aos-anchor-placement="center-bottom">Chamei sua atenção? Aproveite entre em contato comigo, me chame em alguma rede social abaixo ou mande uma mensagem preenchendo o formulário abaixo, reponderei em até 24h.</p>
-                </div>
+            <p data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+              Se você se interessou pelos meus serviços, fique à vontade para
+              entrar em contato comigo. Você pode me encontrar nas redes sociais
+              listadas abaixo ou preencher o formulário, e responderei dentro de
+              24 horas.
+            </p>
+          </div>
 
-                <div class="contact__content">
-                    <form method="POST" class="contact-form"  data-aos="fade-up-right" data-aos-anchor-placement="center-bottom">
-                        <input type="text" placeholder="Nome:" name="name" class="name" required>
+          <div class="contact__content">
+            <form
+              method="POST"
+              class="contact-form"
+              data-aos="fade-up-right"
+              data-aos-anchor-placement="center-bottom"
+            >
+              <input
+                type="text"
+                placeholder="Nome:"
+                name="name"
+                class="name"
+                required
+              />
 
-                        <input type="email" placeholder="E-mail:" name="email" class="email" required>
+              <input
+                type="email"
+                placeholder="E-mail:"
+                name="email"
+                class="email"
+                required
+              />
 
-                        <input type="tel" placeholder="Numero:" name="numero" class="number" required >
+              <input
+                type="tel"
+                placeholder="Numero:"
+                name="numero"
+                class="number"
+                required
+              />
 
-                        <textarea placeholder="Mensagem:" name="message" class="mensagem" required></textarea>
+              <textarea
+                placeholder="Mensagem:"
+                name="message"
+                class="mensagem"
+                required
+              ></textarea>
 
-                        <div class="btn">
-                            <button class="submit" type="submit">Enviar</button>
-                        </div>
+              <div class="btn">
+                <button class="submit" type="submit">Enviar</button>
+              </div>
 
-                        <div class="sucess">
-                            <h3><ion-icon name="checkmark-circle-outline"></ion-icon> Mensagem enviada com sucesso</h3>
+              <div class="sucess">
+                <h3>
+                  <ion-icon name="checkmark-circle-outline"></ion-icon> Mensagem
+                  enviada com sucesso
+                </h3>
 
-                            <p>Aguarde que reponderei mais rápido que possivel.</p>
-                        </div>
-                    </form>
+                <p>Aguarde que reponderei mais rápido que possivel.</p>
+              </div>
+            </form>
 
-                    <div class="img__contato">
-                        <img src="assets/img/undraw_message_sent_re_q2kl-svg.svg" alt="my contact"  data-aos="fade-up-left" data-aos-anchor-placement="center-bottom" id="contactImg">
-                    </div>
-                </div>
-            </section><!--CONTATO-->
+            <div class="img__contato">
+              <img
+                src="assets/img/undraw_message_sent_re_q2kl-svg.svg"
+                alt="my contact"
+                data-aos="fade-up-left"
+                data-aos-anchor-placement="center-bottom"
+                id="contactImg"
+              />
+            </div>
+          </div>
+        </section>
+        <!--CONTATO-->
 
-            <footer>
-                <div class="social__media">
-                    <div class="icon">
-                        <a href="https://github.com/LucianoGarcia1"><ion-icon name="logo-github" id="git"></ion-icon></a>
-                    </div>
+        <footer>
+          <div class="social__media">
+            <div class="icon">
+              <a href="https://github.com/LucianoGarcia1"
+                ><ion-icon name="logo-github" id="git"></ion-icon
+              ></a>
+            </div>
 
-                    <div class="icon">
-                       <a href="https://www.instagram.com/lordvader_coding/"> <ion-icon name="logo-instagram" id="insta"></ion-icon></a>
-                    </div>
+            <div class="icon">
+              <a href="https://www.instagram.com/lcgarcia_021/">
+                <ion-icon name="logo-instagram" id="insta"></ion-icon
+              ></a>
+            </div>
 
-                    <div class="icon">
-                        <a href="https://www.linkedin.com/in/luciano-garcia-a6b0a2209/"><ion-icon name="logo-linkedin" id="linkedin"></ion-icon></a>
-                    </div>
-                </div>
-            </footer>
-        </section><!--CONTAINER-->
+            <div class="icon">
+              <a href="https://www.linkedin.com/in/luciano-garcia-a6b0a2209/"
+                ><ion-icon name="logo-linkedin" id="linkedin"></ion-icon
+              ></a>
+            </div>
+          </div>
+        </footer>
+      </section>
+      <!--CONTAINER-->
     </section>
 
     <script src="src/js/pre-load.js"></script>
@@ -367,16 +547,22 @@
     <!--AOS INIT-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+      AOS.init();
     </script>
 
     <!--ICONES-->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script> 
-    <script nomodule  src="https: //unpkg .com/ionicons@5.5.2/dist/ionicons/ionicons.js "></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https: //unpkg .com/ionicons@5.5.2/dist/ionicons/ionicons.js "
+    ></script>
 
     <!--FIREBASE-->
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase.js"></script>
 
     <script src="src/js/form.js"></script>
-</body>
+  </body>
 </html>
