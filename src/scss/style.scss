@@ -4,31 +4,18 @@
 @import "animation";
 @import "scroll";
 
+
 /*PRE CARREGAMNETO CSS*/
 
-.pre-carregamento {
+.fundo {
   width: 100%;
   min-height: 100vh;
   position: fixed;
   background-color: var(--background-blue);
   top: 0;
   left: 0;
-
   z-index: 100000;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   transition: 0.5s;
-
-  .spinner-carregamento {
-    width: 40px;
-    height: 40px;
-    background-color: var(--color-white);
-    border-radius: 100%;
-    animation: carregamento 0.5s infinite;
-  }
 }
 
 .content {
